@@ -34,4 +34,12 @@ public class Board {
 	public Piece piece(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
 	}
+	
+	//PARA COLOCAR A PEÇA EM UMA POSIÇÃO
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		//ATRIBUTO PIECES Q É UMA MATRIZ VAI RECEBER O PIECE NA POSIÇÃO INDICADA
+		piece.position = position;
+		//O POSITION DO PIECE VAI RECEBER O POSITION INDICADO
+	}
 }
